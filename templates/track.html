@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Live Track{% endblock %}
+{% block content %}
+<h2>Live Tracking (simulated)</h2>
+<p>This page demonstrates a simple live-map. Data is simulated client-side for demo.</p>
+<div id="map" style="height:400px;"></div>
+
+<ul class="bus-list">
+  {% for b in buses %}
+    <li data-lat="{{ b.lat }}" data-lng="{{ b.lng }}">{{ b.id }} — {{ b.route }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
