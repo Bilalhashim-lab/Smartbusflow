@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Schedule{% endblock %}
+{% block content %}
+<h2>Schedules</h2>
+<div class="routes-grid">
+  {% for r in routes %}
+    <div class="route-card">
+      <h3>{{ r.route }}</h3>
+      <p><strong>First:</strong> {{ r.first }} &nbsp; <strong>Last:</strong> {{ r.last }} &nbsp; <strong>Freq:</strong> {{ r.freq }}</p>
+      <p><strong>Stops:</strong> {{ r.stops | join(", ") }}</p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
