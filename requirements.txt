@@ -1,0 +1,6 @@
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.3
+Flask-Login==0.7.0
+Flask-Mail==0.9.1
+python-dotenv==1.0.0
+Werkzeug==2.3.7
