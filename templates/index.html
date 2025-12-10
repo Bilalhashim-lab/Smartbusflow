@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1 class="animate__animated animate__fadeInDown">SmartBusFlow — Smarter student transit</h1>
+  <p class="lead">Real-time friendly UI for students — track buses, view schedules, calculate fares, and get alerts.</p>
+  <div class="hero-actions">
+    <a class="btn" href="{{ url_for('track') }}">Track a Bus</a>
+    <a class="btn ghost" href="{{ url_for('schedule') }}">View Schedule</a>
+  </div>
+</section>
+
+<section class="upcoming">
+  <h2>Upcoming departures</h2>
+  <div class="cards">
+    {% for item in upcoming %}
+      <div class="small-card">
+        <h3>{{ item.route }}</h3>
+        <p>Time: {{ item.time }} — ETA: {{ item.eta }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
