@@ -1,0 +1,25 @@
+smartbusflow/
+├─ app.py
+├─ requirements.txt
+├─ config.py
+├─ .env.example
+├─ README.md
+├─ templates/
+│  ├─ base.html
+│  ├─ index.html
+│  ├─ schedule.html
+│  ├─ track.html
+│  ├─ fare.html
+│  ├─ login.html
+│  ├─ register.html
+│  ├─ dashboard.html
+│  └─ contact.html
+├─ static/
+│  ├─ css/
+│  │  └─ styles.css
+│  ├─ js/
+│  │  └─ main.js
+│  └─ images/
+│     └─ logo.png   (placeholder — add your logo)
+└─ instance/
+   └─ smartbusflow.sqlite  (created when you run)
